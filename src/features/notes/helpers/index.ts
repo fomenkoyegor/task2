@@ -5,3 +5,6 @@ export const formatDate = (d: any) =>
     day: "numeric",
     year: "numeric",
   }).format(new Date(d));
+
+export const parseDate = (str: any) =>
+  str.match(/\d{1,2}[-.\/]?\d{1,2}[.,\/]\d{1,2}[.,\/]\d{1,4}/g) || [];

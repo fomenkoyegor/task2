@@ -1,10 +1,10 @@
 import React from "react";
-import Notes from "./features/notes/Notes";
+import { NotesContainer } from "./features/notes/NotesContainer";
 
 function App() {
   return (
     <div className="App">
-      <Notes />
+      <NotesContainer />
     </div>
   );
 }
