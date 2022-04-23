@@ -6,5 +6,7 @@ export const formatDate = (d: any) =>
     year: "numeric",
   }).format(new Date(d));
 
-export const parseDate = (str: any) =>
-  str.match(/\d{1,2}[-.\/]?\d{1,2}[.,\/]\d{1,2}[.,\/]\d{1,4}/g) || [];
+export const parseDate = (str: any) => {
+  /* eslint-disable */
+  return str.match(/\d+[-.\/]?\d+[.,\/]\d+[.,\/]\d+/g) || [];
+};

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useAppSelector } from "../../../app/hooks";
 import { selectNotes } from "../notesSlice";
 import { NotesItem } from "./NotesItem";
+import { FaArchive } from "react-icons/fa";
 
 export function NotesList() {
   const notes = useAppSelector(selectNotes);
@@ -16,14 +17,14 @@ export function NotesList() {
     <table className={classNames}>
       <thead className="table-dark">
         <tr>
-          <th>name</th>
+          <th className="text-3xl font-bold underline">name</th>
           <th>created</th>
           <th>category</th>
           <th>content</th>
           <th>dates</th>
           <th>
             <button onClick={onChangeArchivedNotesHandler}>
-              <i className="material-icons">backup</i>
+              <FaArchive />
               <span>{notesArchive.length}</span>
             </button>
           </th>
