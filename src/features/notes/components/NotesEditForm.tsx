@@ -37,13 +37,14 @@ export const NotesEditForm: FC<PropsItem> = ({ note, changeIsEditHandler }) => {
     changeIsEditHandler();
   };
   return (
-    <tr>
-      <td>
-        <form onSubmit={onSubmitHandler}>
+    <div className="table-row bg-slate-200 hover:bg-slate-400">
+      <div className="table-cell p-2 align-middle">
+
+        <form onSubmit={onSubmitHandler} className='w-full bg-white shadow rounded p-8'>
           <div className="form-group">
             <input
               type="text"
-              className="form-control"
+              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               name="name"
               required
               placeholder="name"
@@ -53,6 +54,7 @@ export const NotesEditForm: FC<PropsItem> = ({ note, changeIsEditHandler }) => {
           </div>
           <div className="form-group">
             <textarea
+              className='mt-2 shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
               name="content"
               required
               placeholder="content"
@@ -62,6 +64,21 @@ export const NotesEditForm: FC<PropsItem> = ({ note, changeIsEditHandler }) => {
           </div>
           <div className="form-group">
             <select
+              className='orm-select
+              appearance-none
+              block
+              w-full
+              px-3
+              py-1.5
+              text-base
+              font-normal
+              text-gray-700
+              bg-white bg-clip-padding bg-no-repeat
+              border border-solid border-gray-300
+              rounded
+              transition
+              ease-in-out
+              m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none'
               name="categoryId"
               required
               onChange={onChangeCategoryHandler}
@@ -74,22 +91,23 @@ export const NotesEditForm: FC<PropsItem> = ({ note, changeIsEditHandler }) => {
               ))}
             </select>
           </div>
-          <div className="form-group">
-            <button type="submit" className="form-control btn btn-success">
-              <i className="material-icons">check</i>
+          <div className="form-group mt-2">
+            <button type="submit" className="bg-cyan-400 p-1 rounded mr-1">
+              save
             </button>
             <button
               onClick={() => {
                 changeIsEditHandler();
               }}
               type="button"
-              className="form-control btn btn-danger"
+              className="bg-red-500 p-1 rounded mr-1"
             >
-              <i className="material-icons">close</i>
+              cancel
             </button>
           </div>
         </form>
-      </td>
-    </tr>
+
+      </div>
+    </div>
   );
 };

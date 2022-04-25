@@ -18,21 +18,23 @@ export function CategoriesList() {
   });
 
   const categoriesWithActiveArchiveNote = categories.map(joinNotes);
+  return(
+    <div className="table w-full mt-3">
 
-  return (
-    <table className="table table-responsive">
-      <thead className="table-dark">
-        <tr>
-          <th>Note category</th>
-          <th>Active</th>
-          <th>Archived</th>
-        </tr>
-      </thead>
-      <tbody>
-        {categoriesWithActiveArchiveNote.map((category) => (
-          <CategoriesItem key={category.id} category={category} />
-        ))}
-      </tbody>
-    </table>
-  );
+      <div className="table-header-group">
+        <div className="table-row bg-slate-500 text-white">
+          <div className="table-cell text-center p-3">Note category</div>
+          <div className="table-cell text-left">Active</div>
+          <div className="table-cell text-left">Archived</div>
+        </div>
+      </div>
+
+      <div className="table-row-group">
+      {categoriesWithActiveArchiveNote.map((category) => (
+        <CategoriesItem key={category.id} category={category} />
+      ))}
+      </div>
+
+    </div>
+  )
 }

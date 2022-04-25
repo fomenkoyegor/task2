@@ -4,6 +4,7 @@ import { ICategory } from "./interfaces/ICategory";
 import { INote } from "./interfaces/INote";
 import { Category } from "./models/Category";
 import { Note } from "./models/Note";
+import { FaShopify, FaRandom, FaHotjar, FaQuoteRight } from "react-icons/fa";
 
 export interface NotesState {
   categories: ICategory[];
@@ -12,20 +13,20 @@ export interface NotesState {
 
 const initialState: NotesState = {
   categories: [
-    Category(1, "Task", "shopping_cart"),
-    Category(2, "Random Thought", "settings_accessibility"),
-    Category(3, "Idea", "model_training"),
-    Category(4, "Quote", "more_horiz"),
+    Category(1, "Task", FaShopify),
+    Category(2, "Random Thought", FaRandom),
+    Category(3, "Idea", FaHotjar),
+    Category(4, "Quote", FaQuoteRight),
   ],
   notes: [
     Note("shopping cart", "im fine 05.12.23", 1),
-    Note("shopping cart", "im fine", 2),
-    Note("shopping cart", "im fine 05.12.23 05/12/23", 3),
-    Note("shopping cart", "im fine", 4),
-    Note("shopping cart", "im fine", 1),
-    Note("shopping cart", "im fine", 2),
-    Note("shopping cart", "im fine", 3),
-    Note("shopping cart", "im fine", 4),
+    Note("shopping", "im fine", 2),
+    Note("cart", "im fine 05.12.23 05/12/23", 3),
+    Note("one", "im fine", 4),
+    Note("more", "im fine", 1),
+    Note("time", "im fine", 2),
+    Note("baby", "im fine", 3),
+    Note("show", "im fine", 4),
   ],
 };
 

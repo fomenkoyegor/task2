@@ -2,12 +2,4 @@
 @tailwind components;
 @tailwind utilities;
 
-.content {
-  background-color: red;
-  height: 10px;
-  position: relative;
-}
 
-.content p {
-  position: absolute;
-}

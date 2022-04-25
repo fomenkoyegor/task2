@@ -5,7 +5,7 @@ import { NotesList } from "./components/NotesList";
 
 export function NotesContainer() {
   return (
-    <div className="container">
+    <div className="container mx-auto">
       <NotesList />
       <NotesCreate />
       <CategoriesList />
