@@ -17,6 +17,7 @@ export const NotesTableRow: FC<PropsItem> = ({ note, changeIsEditHandler }) => {
   const onRemoveNoteHandler = () => dispatch(removeNote({ id: note.id }));
   return (
       <div className="table-row bg-slate-200 hover:bg-slate-400">
+
           <div className="table-cell p-2 align-middle">
               <button className="bg-slate-800 text-white p-2 rounded-full inline-block mr-1">
                   {category?.icon()}
@@ -54,6 +55,7 @@ export const NotesTableRow: FC<PropsItem> = ({ note, changeIsEditHandler }) => {
                   <FaShoppingBasket />
               </button>
           </div>
+
       </div>
   );
 };
